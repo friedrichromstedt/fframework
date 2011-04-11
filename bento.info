@@ -1,0 +1,9 @@
+Name: fframework
+Version: 0.1.0b
+Author: Friedrich Romstedt
+AuthorEmail: friedrichromstedt@gmail.com
+License: BSD-style
+
+Library:
+    Packages:
+        fframework
