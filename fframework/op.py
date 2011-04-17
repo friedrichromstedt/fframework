@@ -276,7 +276,6 @@ def asopfunction(opfunction_like):
         unchanged.
     *   If *opfunction_like* is a :class:`~fframework.function.Function`,
         ``OpWrap(opfunction_like)`` is returned.
-    *   If *opfunction_like* is None, a :class:`OpIdentity` is returned.
     *   Else, the *opfunction_like* is interpreted as a :class:`OpConstant`
         instance.
     """
@@ -285,8 +284,6 @@ def asopfunction(opfunction_like):
         return opfunction_like
     elif isinstance(opfunction_like, Function):
         return OpWrap(opfunction_like)
-    elif opfunction_like is None:
-        return OpIdentity()
     else:
         return OpConstant(opfunction_like)
 

@@ -54,13 +54,10 @@ class Identity(Function):
 def asfunction(function_like):
     """
     *   If *function_like* is a :class:`Function`, it is returned unchanged.
-    *   If *function_like* is None, an :class:`Identity` is returned.
     *   Else, the *function_like* is interpreted as a :class:`Constant`.
     """
 
     if isinstance(function_like, Function):
         return function_like
-    elif function_like is None:
-        return Identity()
     else:
         return Constant(function_like)
